@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Blood Bank Locaotor</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="styles/mystyle.css">
+    
+    </head>
+    
+    <body ng-app="myapp" ng-controller="maincontroller">
+        <!--header-->
+        <div ng-include="'views/header.html'"></div>
+    
+        <!--main body-->
+        <div ng-include="'views/main.html'"></div>
+    
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+    </script>
+        
+        <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAoU0xMqnl_0hi13e01qOUs8fdxKaID6Hs&callback=initMap">
+    </script>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        
+    <script src="https://use.fontawesome.com/1767f5f930.js"></script>
+    
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
+    <script src="scripts/app.js"></script>
+        
+    </body>
+        
+</html>
