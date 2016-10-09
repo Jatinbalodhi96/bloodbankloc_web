@@ -1,0 +1,12 @@
+.searchButton{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.main-body{
+    height: 300px;
+}
+.h_list{
+    overflow: scroll;
+}

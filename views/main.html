@@ -1,0 +1,40 @@
+<div class="container-fluid">
+    <div class="row main-body">
+        <form>
+        
+        <!--states-->    
+        <div class="col-sm-3 form-group h_list">
+            <input list="states" class="form-control" placeholder="State" id="state" ng-model="selected.state">
+            <datalist id="states">
+                <option ng-repeat="state in states" value="{{state}}">
+            </datalist>
+            <button type="submit" class="btn btn-block btn-primary searchButton" ng-click="submitRequest()">
+            <span class="glyphicon glyphicon-search"> Search</span>
+            </button>
+            
+            <div>
+                <ol ng-repeat="hname in res_data.records" class="list-group">
+                    <a class="list-group-item" ng-click=showDetails(hname.id)>{{hname.h_name}} ({{hname.city}})</a>
+                </ol>
+            </div>
+            
+        </div>
+        
+        <div class="col-sm-3" ng-show="show">
+            <h4>{{h_details.records[0].h_name +" ("+h_details.records[0].city+")"}}</h4><br>
+            <hr>
+            <h5>{{"Address : " + h_details.records[0].address}}</h5>
+            <h5>Contact : {{h_details.records[0].contact}}</h5>
+            <h5>Email : {{h_details.records[0].email}}</h5>
+            <h5>Fax ID : {{h_details.records[0].f_id}}</h5>
+            <h5>Helpline : {{h_details.records[0].helpline}}</h5>
+            <h5>State : {{h_details.records[0].state}}</h5>
+            
+        </div>
+        </form>
+        <div class="col-sm-6" id="map">
+            
+        </div>
+        
+    </div>
+</div>
